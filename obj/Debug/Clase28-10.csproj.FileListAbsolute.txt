@@ -19,3 +19,14 @@ C:\Users\Matt_\OneDrive\Desktop\Clase28-10\obj\Debug\Clase28-10.csproj.GenerateR
 C:\Users\Matt_\OneDrive\Desktop\Clase28-10\obj\Debug\Clase28-10.csproj.CoreCompileInputs.cache
 C:\Users\Matt_\OneDrive\Desktop\Clase28-10\obj\Debug\Clase28-10.exe
 C:\Users\Matt_\OneDrive\Desktop\Clase28-10\obj\Debug\Clase28-10.pdb
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\bin\Debug\Clase28-10.exe.config
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\bin\Debug\Clase28-10.exe
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\bin\Debug\Clase28-10.pdb
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Clase28-10.csproj.AssemblyReference.cache
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Clase28-10.exe.config
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Clase28_10.Properties.Resources.resources
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Views.ProductForm.resources
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Clase28-10.csproj.GenerateResource.cache
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Clase28-10.csproj.CoreCompileInputs.cache
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Clase28-10.exe
+C:\Users\Matt_\OneDrive\Desktop\WindowsForm\obj\Debug\Clase28-10.pdb

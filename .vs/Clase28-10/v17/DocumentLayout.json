@@ -1,9 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Matt_\\OneDrive\\Desktop\\Clase28-10\\",
+  "WorkspaceRootPath": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\clase28-10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\windowsform\\views\\productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|solutionrelative:views\\productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\windowsform\\views\\productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|solutionrelative:views\\productform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\windowsform\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\windowsform\\domain\\inmemoryproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|solutionrelative:domain\\inmemoryproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\windowsform\\domain\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|solutionrelative:domain\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\windowsform\\domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|solutionrelative:domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|c:\\users\\matt_\\onedrive\\desktop\\windowsform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}|Clase28-10.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,12 +43,89 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\Clase28-10\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\Clase28-10\\Program.cs",
-              "RelativeToolTip": "Program.cs",
+              "Title": "ProductForm.cs",
+              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Views\\ProductForm.cs",
+              "RelativeDocumentMoniker": "Views\\ProductForm.cs",
+              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Views\\ProductForm.cs",
+              "RelativeToolTip": "Views\\ProductForm.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T13:08:38.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T13:07:16.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InMemoryProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Domain\\InMemoryProductRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\InMemoryProductRepository.cs",
+              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Domain\\InMemoryProductRepository.cs",
+              "RelativeToolTip": "Domain\\InMemoryProductRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T13:07:05.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Domain\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Domain\\IProductRepository.cs",
+              "RelativeToolTip": "Domain\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T13:07:02.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Views\\ProductForm.cs",
+              "RelativeDocumentMoniker": "Views\\ProductForm.cs",
+              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Views\\ProductForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Views\\ProductForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T13:04:52.229Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Domain\\Product.cs",
+              "RelativeDocumentMoniker": "Domain\\Product.cs",
+              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Domain\\Product.cs",
+              "RelativeToolTip": "Domain\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T13:04:37.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Matt_\\OneDrive\\Desktop\\WindowsForm\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T12:39:22.569Z",
               "EditorCaption": ""

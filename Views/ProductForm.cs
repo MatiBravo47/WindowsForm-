@@ -99,12 +99,14 @@ namespace Views
 
         Guid IProductView.SelectedId()
         {
-            throw new NotImplementedException();
+            if (dgv.CurrentRow?.DataBoundItem is Product p)
+                return p.id;
+            return Guid.Empty;
         }
 
         public string searchText()
         {
-            throw new NotImplementedException();
+            return txtSearch.Text.Trim();
         }
     }
 }
