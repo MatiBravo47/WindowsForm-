@@ -108,5 +108,10 @@ namespace Views
         {
             return txtSearch.Text.Trim();
         }
+
+        private void ProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
