@@ -139,7 +139,7 @@ namespace Controllers
                 msg = "El precio debe ser mayor a 0";
             
             if (p.Stock < 0)
-                msg = "El stock no pueser menor a 0";
+                msg = "El stock no puede ser menor a 0";
 
             return msg;
         }
