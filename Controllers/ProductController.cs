@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain;
+using Model;
 using Views;
 
 namespace Controllers
@@ -128,12 +128,16 @@ namespace Controllers
             string msg = "";
             if (string.IsNullOrWhiteSpace(p.Name)) 
                 msg = "El nombre es obligatorio";
+
             if (string.IsNullOrWhiteSpace(p.Code))
                 msg = "El codigo es obligatorio";
+            
             if (_repo.ExistsCode(p.Code, p.id))
                 msg = "El producto ya existe";
+            
             if (p.Price < 0)
                 msg = "El precio debe ser mayor a 0";
+            
             if (p.Stock < 0)
                 msg = "El stock no pueser menor a 0";
 

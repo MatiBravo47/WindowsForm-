@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Views;
-using Domain;
+using Model;
 using Controllers;
 
-namespace Clase28_10
+namespace WinForms
 {
     static class Program
     {

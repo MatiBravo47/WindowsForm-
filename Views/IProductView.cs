@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain;
+using Model;
 
 namespace Views
 
 {
     interface IProductView
     {
-        // Events
+        // Events: avisa que el usuario lo pidió
         event EventHandler AddRequested;
         event EventHandler EditRequested;
         event EventHandler DeleteRequested;
@@ -18,12 +18,14 @@ namespace Views
         event EventHandler CancelRequested;
         event EventHandler SearchRequested;
 
-        // Feedback
+        // Feedback(respuesta al usuario)
         Guid SelectedId();
+        //Info: Muestra mensajes informativos
         void Info(string msg);
+        //Muestra errores
         void Error(string msg);
 
-        //Datos
+        //Datos(interacción con la UI)
         void EnterEditMode(bool isNew);
         void ExitEditMode();
         void BindProducts(IEnumerable<Product> products);

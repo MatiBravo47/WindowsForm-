@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+🔹 Define qué se puede hacer con productos
+🔹 No dice cómo
+🔹 Permite cambiar de base de datos sin romper nada
+*/
 
-namespace Domain
+using System;
+using System.Collections.Generic;
+
+namespace Model
 {
     interface IProductRepository
     {
@@ -13,6 +16,8 @@ namespace Domain
         void Delete(Product p);
         Product GetById(Guid id);
         IEnumerable<Product> GetAll(string search = null);
+        
+        //evita productos duplicados
         bool ExistsCode(string code, Guid? excludeId = null);
     }
 }

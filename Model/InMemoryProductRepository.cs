@@ -1,10 +1,14 @@
-﻿using System;
+﻿/*
+🔹 Guarda datos en memoria
+🔹 Ideal para ejemplos, pruebas y aprendizaje
+🔹 Simula una base de datos
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Domain
+namespace Model
 {
     class InMemoryProductRepository : IProductRepository
     {
@@ -19,12 +23,18 @@ namespace Domain
         {
             _data.Remove(p);
         }
-
+        /*
+         Ver si ya existe un producto con ese código
+         Se usa mucho al crear o editar productos
+        */
         public bool ExistsCode(string code, Guid? excludeId = null)
         {
+            //_data.Any(...) Devuelve true si al menos uno cumple la condición.
             return _data.Any(p =>
+                //Compara códigos sin importar mayúsculas
                 p.Code.Equals(code, StringComparison.OrdinalIgnoreCase) 
                 &&
+                //Evitar que se compare contra sí mismo cuando se edita
                 (!excludeId.HasValue || p.id != excludeId.Value)
                 );
         }

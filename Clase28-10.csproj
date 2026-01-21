@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Domain\InMemoryProductRepository.cs" />
-    <Compile Include="Domain\IProductRepository.cs" />
-    <Compile Include="Domain\Product.cs" />
+    <Compile Include="Model\InMemoryProductRepository.cs" />
+    <Compile Include="Model\IProductRepository.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Views\IProductView.cs" />
     <Compile Include="Views\ProductForm.cs">
       <SubType>Form</SubType>
