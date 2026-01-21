@@ -36,7 +36,7 @@ namespace Views
             btnDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
             btnSave.Click += (s, e) => SaveRequested?.Invoke(this, EventArgs.Empty);
             btnCancel.Click += (s, e) => CancelRequested?.Invoke(this, EventArgs.Empty);
-            txtSearch.TextChanged += (s, e) => SearchChanged?.Invoke(this, EventArgs.Empty);
+            txtSearch.TextChanged += (s, e) => SearchRequested?.Invoke(this, EventArgs.Empty);
 
             ExitEditMode();
         }
@@ -110,6 +110,16 @@ namespace Views
         }
 
         private void ProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
