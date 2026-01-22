@@ -146,23 +146,22 @@ namespace Controllers
 
         private string Validate(Product p)
         {
-            string msg = "";
             if (string.IsNullOrWhiteSpace(p.Name)) 
-                msg = "El nombre es obligatorio";
+                return "El nombre es obligatorio";
 
             if (string.IsNullOrWhiteSpace(p.Code))
-                msg = "El codigo es obligatorio";
+                return "El codigo es obligatorio";
             
             if (_repo.ExistsCode(p.Code, p.id))
-                msg = "El producto ya existe";
+                return "El producto ya existe";
             
             if (p.Price < 0)
-                msg = "El precio debe ser mayor a 0";
+                return "El precio debe ser mayor a 0";
             
             if (p.Stock < 0)
-                msg = "El stock no puede ser menor a 0";
+                return "El stock no puede ser menor a 0";
 
-            return msg;
+            return "";
         }
 
         private void Seed()

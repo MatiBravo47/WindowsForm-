@@ -8,6 +8,7 @@ using Model;
 namespace Views
 
 {
+    //Se implementa en ProductForm.cs 
     interface IProductView
     {
         // Events: avisa que el usuario lo pidió
