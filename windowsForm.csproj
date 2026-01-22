@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{81B1B9A0-5F80-4F1C-9EB2-6B69311D0C7A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Clase28_10</RootNamespace>
-    <AssemblyName>Clase28-10</AssemblyName>
+    <RootNamespace>WindowsForm</RootNamespace>
+    <AssemblyName>WindowsForm</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -67,6 +67,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>

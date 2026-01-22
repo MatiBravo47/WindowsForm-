@@ -14,7 +14,7 @@ namespace WinForms
         /* 
         Este atributo indica que la aplicación utilizará un modelo de un solo hilo (STA),
         necesario para que Windows Forms funcione correctamente y para soportar características
-        como cuadros de diálogo, portapapeles, controles ActiveX y manejo seguro de la UI.
+        como cuadros de diálogo, portapapeles y manejo seguro de la UI.
         */
         [STAThread]
         static void Main()

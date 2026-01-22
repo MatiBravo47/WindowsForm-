@@ -1,6 +1,5 @@
 ﻿/*
 🔹 Guarda datos en memoria
-🔹 Ideal para ejemplos, pruebas y aprendizaje
 🔹 Simula una base de datos
 */
 

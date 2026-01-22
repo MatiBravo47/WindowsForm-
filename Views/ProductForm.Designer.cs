@@ -78,7 +78,7 @@ namespace Views
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(71, 31);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
@@ -298,17 +298,21 @@ namespace Views
 
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.TextBox txtSearch;
+        
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
+        
         private System.Windows.Forms.Panel pnlEditor;
         private System.Windows.Forms.CheckBox chkActive;
+        
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCode;
+        
         private System.Windows.Forms.Label labelStock;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelName;
