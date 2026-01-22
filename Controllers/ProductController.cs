@@ -14,8 +14,7 @@ namespace Controllers
         private readonly IProductRepository _repo;
         private bool _isNew;
 
-        public ProductController(IProductRepository repo, 
-                                 IProductView view)
+        public ProductController(IProductRepository repo, IProductView view)
         {
             _view = view;
             _repo = repo;
@@ -57,7 +56,7 @@ namespace Controllers
 
             _view.ExitEditMode();
             Refresh();
-            _view.Info("guardado");
+            _view.Info("Nuevo producto guardado");
         }
 
         private void StartDelete()

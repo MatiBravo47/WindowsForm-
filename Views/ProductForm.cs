@@ -123,5 +123,20 @@ namespace Views
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkActive_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
