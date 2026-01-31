@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Model
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
         void Add(Product p);
         void Update(Product p);
