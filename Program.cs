@@ -21,14 +21,16 @@ namespace WinForms
             // Define el motor de renderizado de texto.
             // false = usa GDI+, recomendado para la mayoría de las aplicaciones WinForms.
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            
+
+
             // FORMA 1 de inicializacion: Sin patrón MVP (formulario simple)
             // Application.Run(new ProductForm());
-            
+
             //Crear dependencias
-            IProductRepository repo = new InMemoryProductRepository();
-            
+            //IProductRepository repo = new InMemoryProductRepository();
+
+            IProductRepository repo = new GenericProductRepository();
+
             // FORMA 2: Con patrón MVP (inyección de dependencias)
             //Crear el formulario UNA SOLA VEZ
             

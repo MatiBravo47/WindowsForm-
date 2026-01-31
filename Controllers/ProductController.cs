@@ -33,8 +33,6 @@ namespace Controllers
 
             //Carga datos iniciales
             
-            //Productos de ejemplo
-            Seed();
             //muestra la lista
             Refresh();
         }
@@ -162,26 +160,6 @@ namespace Controllers
                 return "El stock no puede ser menor a 0";
 
             return "";
-        }
-
-        private void Seed()
-        {
-            _repo.Add(new Product
-            {
-                Code = "A001",
-                Active = true,
-                Price = 1000,
-                Name = "Teclado Gamer",
-                Stock = 120
-            });
-            _repo.Add(new Product
-            {
-                Code = "A002",
-                Active = true,
-                Price = 500,
-                Name = "Mouse Gamer",
-                Stock = 80
-            });
         }
     }
 }

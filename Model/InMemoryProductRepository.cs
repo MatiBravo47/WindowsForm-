@@ -2,7 +2,7 @@
 🔹 Guarda datos en memoria
 🔹 Simula una base de datos
 */
-
+//NO SE USA! SE USO PARA TESTING
 using System;
 using System.Collections.Generic;
 using System.Linq;
