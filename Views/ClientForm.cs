@@ -34,6 +34,9 @@ namespace Views
             dgvClients.MultiSelect = false;
 
             dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nombre" });
+            dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Email", HeaderText = "Email" });
+            dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Phone", HeaderText = "Celular" });
+            dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Address", HeaderText = "Direccion" });
 
             // Conectar eventos
             btnAdd.Click += (s, e) => AddRequested?.Invoke(this, EventArgs.Empty);
@@ -52,19 +55,28 @@ namespace Views
             dgvClients.DataSource = new List<Client>(clients);
         }
 
+        //Lee los datos del formulario
         public Client ReadEditor()
         {
             return new Client
             {
                 id = _editingId ?? Guid.NewGuid(),
-                Name = txtName.Text.Trim()
+                Name = txtName.Text.Trim(),
+                Email = txtEmail.Text.Trim(),
+                Phone = txtPhone.Text.Trim(),
+                Address = txtAddress.Text.Trim()
+
             };
         }
 
+        // Carga datos en el formulario
         public void LoadEditor(Client c)
         {
             _editingId = c?.id;
             txtName.Text = c?.Name ?? "";
+            txtEmail.Text = c?.Email ?? "";
+            txtPhone.Text = c?.Phone ?? "";
+            txtAddress.Text = c?.Address ?? "";
         }
 
         public Guid SelectedId()

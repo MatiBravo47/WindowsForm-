@@ -108,7 +108,10 @@ namespace Controllers
         private static Client Clone(Client c) => new Client()
         {
             id = c.id,
-            Name = c.Name
+            Name = c.Name,
+            Email = c.Email,
+            Phone = c.Phone,
+            Address = c.Address
         };
 
         private void StartAdd()

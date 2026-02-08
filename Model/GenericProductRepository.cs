@@ -7,7 +7,7 @@ namespace Model
     /// <summary>
     /// Implementación del repositorio de productos usando Repository<T> genérico
     /// </summary>
-    class GenericProductRepository : IProductRepository
+    public class GenericProductRepository : IProductRepository
     {
         private const string FileName = "products";
 
