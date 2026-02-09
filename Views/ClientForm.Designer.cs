@@ -31,6 +31,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.pnlEditor = new System.Windows.Forms.Panel();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -52,7 +54,7 @@
             this.dgvClients.Margin = new System.Windows.Forms.Padding(2);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowHeadersWidth = 51;
-            this.dgvClients.Size = new System.Drawing.Size(474, 358);
+            this.dgvClients.Size = new System.Drawing.Size(591, 358);
             this.dgvClients.TabIndex = 0;
             // 
             // txtSearch
@@ -65,10 +67,11 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(33, 326);
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(15, 315);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(68, 28);
+            this.btnSave.Size = new System.Drawing.Size(78, 28);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -76,7 +79,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Tomato;
-            this.btnDelete.Location = new System.Drawing.Point(512, 126);
+            this.btnDelete.Location = new System.Drawing.Point(644, 128);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(68, 28);
@@ -87,7 +90,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEdit.Location = new System.Drawing.Point(512, 94);
+            this.btnEdit.Location = new System.Drawing.Point(644, 96);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(68, 28);
@@ -98,7 +101,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnAdd.Location = new System.Drawing.Point(512, 62);
+            this.btnAdd.Location = new System.Drawing.Point(644, 62);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(68, 28);
@@ -108,10 +111,11 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(115, 326);
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(115, 315);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(68, 28);
+            this.btnCancel.Size = new System.Drawing.Size(81, 28);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -119,6 +123,8 @@
             // pnlEditor
             // 
             this.pnlEditor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEditor.Controls.Add(this.txtSurname);
+            this.pnlEditor.Controls.Add(this.lblSurname);
             this.pnlEditor.Controls.Add(this.txtAddress);
             this.pnlEditor.Controls.Add(this.label3);
             this.pnlEditor.Controls.Add(this.txtPhone);
@@ -129,15 +135,32 @@
             this.pnlEditor.Controls.Add(this.labelName);
             this.pnlEditor.Controls.Add(this.btnSave);
             this.pnlEditor.Controls.Add(this.txtName);
-            this.pnlEditor.Location = new System.Drawing.Point(665, 62);
+            this.pnlEditor.Location = new System.Drawing.Point(729, 62);
             this.pnlEditor.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditor.Name = "pnlEditor";
             this.pnlEditor.Size = new System.Drawing.Size(210, 358);
             this.pnlEditor.TabIndex = 7;
             // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(15, 97);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(181, 20);
+            this.txtSurname.TabIndex = 15;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Location = new System.Drawing.Point(12, 81);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(61, 17);
+            this.lblSurname.TabIndex = 14;
+            this.lblSurname.Text = "Apellido";
+            // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(15, 283);
+            this.txtAddress.Location = new System.Drawing.Point(15, 254);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(181, 20);
             this.txtAddress.TabIndex = 4;
@@ -145,15 +168,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 256);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "Direccion";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(15, 217);
+            this.txtPhone.Location = new System.Drawing.Point(15, 201);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(181, 20);
             this.txtPhone.TabIndex = 3;
@@ -161,15 +185,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 192);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 181);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "N° Teléfono";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(15, 135);
+            this.txtEmail.Location = new System.Drawing.Point(15, 149);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(181, 20);
             this.txtEmail.TabIndex = 2;
@@ -177,27 +202,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 119);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(129, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "Correo Electrónico";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelName.Location = new System.Drawing.Point(75, 20);
+            this.labelName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(12, 17);
             this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(58, 17);
+            this.labelName.Size = new System.Drawing.Size(61, 17);
             this.labelName.TabIndex = 8;
             this.labelName.Text = "Nombre";
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtName.Location = new System.Drawing.Point(15, 45);
+            this.txtName.Location = new System.Drawing.Point(15, 36);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(181, 23);
@@ -229,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 456);
+            this.ClientSize = new System.Drawing.Size(960, 456);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.pnlEditor);
@@ -270,5 +297,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label lblSurname;
     }
 }

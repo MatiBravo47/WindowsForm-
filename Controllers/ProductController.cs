@@ -128,6 +128,9 @@ namespace Controllers
             id = p.id,
             Code = p.Code,
             Name = p.Name,
+            Category = p.Category,
+            Color = p.Color,
+            Size = p.Size,
             Cost = p.Cost,
             Stock = p.Stock,
             Active = p.Active

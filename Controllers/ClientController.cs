@@ -115,6 +115,7 @@ namespace Controllers
         {
             id = c.id,
             Name = c.Name,
+            Surname = c.Surname,
             Email = c.Email,
             Phone = c.Phone,
             Address = c.Address

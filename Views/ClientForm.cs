@@ -32,8 +32,10 @@ namespace Views
             dgvClients.AutoGenerateColumns = false;
             dgvClients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvClients.MultiSelect = false;
+            dgvClients.ReadOnly = true;
 
             dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nombre" });
+            dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Surname", HeaderText = "Apellido" });
             dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Email", HeaderText = "Correo Electrónico" });
             dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Phone", HeaderText = "N° Teléfono" });
             dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Address", HeaderText = "Direccion" });
@@ -62,6 +64,7 @@ namespace Views
             {
                 id = _editingId ?? Guid.NewGuid(),
                 Name = txtName.Text.Trim(),
+                Surname = txtSurname.Text.Trim(),
                 Email = txtEmail.Text.Trim(),
                 Phone = txtPhone.Text.Trim(),
                 Address = txtAddress.Text.Trim()
@@ -74,6 +77,7 @@ namespace Views
         {
             _editingId = c?.id;
             txtName.Text = c?.Name ?? "";
+            txtSurname.Text = c?.Surname ?? "";
             txtEmail.Text = c?.Email ?? "";
             txtPhone.Text = c?.Phone ?? "";
             txtAddress.Text = c?.Address ?? "";
@@ -116,6 +120,11 @@ namespace Views
                 MessageBoxIcon.Question
                 );
             return result == DialogResult.Yes;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

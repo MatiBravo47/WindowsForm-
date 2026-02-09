@@ -10,6 +10,8 @@ namespace Model
     {
         public Guid id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
+        public string Surname { get; set; }
+
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }

@@ -47,6 +47,8 @@ namespace Views
             dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Code", HeaderText = "Código", Width = 50 });
             dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nombre" });
             dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Category", HeaderText = "Categoria", Width = 70 });
+            dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Size", HeaderText = "Talle", Width = 40 });
+            dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Color", HeaderText = "Color", Width = 70 });
             dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Cost", HeaderText = "Costo", Width = 70 });
             dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "ProfitMargin", HeaderText = "%", Width = 40 });
             dgv.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Price", HeaderText = "Precio" , Width = 70 });
@@ -87,6 +89,8 @@ namespace Views
                 //Trim() Quita espacios al inicio y al final.
                 Code = txtCode.Text.Trim(),
                 Category = txtCategory.Text.Trim(),
+                Color = txtColor.Text.Trim(),
+                Size = txtSize.Text.Trim(),
                 Name = txtName.Text.Trim(),
 
                 //texto a decimal /int, si falla pone -1
@@ -104,6 +108,8 @@ namespace Views
             txtCode.Text = p?.Code ?? "";
             txtName.Text = p?.Name ?? "";
             txtCategory.Text = p?.Category ?? "";
+            txtColor.Text = p?.Color ?? "";
+            txtSize.Text = p?.Size ?? "";
             txtPrice.Text = p?.Price.ToString() ?? "";
             txtProfitMargin.Text = p?.ProfitMargin.ToString() ?? "30";
             txtCost.Text = p?.Cost.ToString() ?? "";
@@ -197,6 +203,11 @@ namespace Views
         }
 
         private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCodigo_Click(object sender, EventArgs e)
         {
 
         }
