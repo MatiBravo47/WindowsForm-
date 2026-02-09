@@ -93,6 +93,10 @@ namespace Controllers
                 _view.Error("No se encontro el producto.");
                 return;
             }
+            if (!_view.Confirm($"Estas seguro de eliminar el producto?"))
+                { 
+                return;
+                }
             _repo.Delete(p);
             Refresh();
             _view.Info("Producto eliminado con exito");
@@ -124,7 +128,7 @@ namespace Controllers
             id = p.id,
             Code = p.Code,
             Name = p.Name,
-            Price = p.Price,
+            Cost = p.Cost,
             Stock = p.Stock,
             Active = p.Active
         };
@@ -151,7 +155,7 @@ namespace Controllers
                 return "El codigo es obligatorio";
             
             if (_repo.ExistsCode(p.Code, p.id))
-                return "El producto ya existe";
+                return "El producto ya existe(Codigo repetido)";
             
             if (p.Price < 0)
                 return "El precio debe ser mayor a 0";

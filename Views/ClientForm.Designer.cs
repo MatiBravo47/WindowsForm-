@@ -69,7 +69,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(68, 28);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
@@ -112,7 +112,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(68, 28);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
@@ -140,7 +140,7 @@
             this.txtAddress.Location = new System.Drawing.Point(15, 283);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(181, 20);
-            this.txtAddress.TabIndex = 14;
+            this.txtAddress.TabIndex = 4;
             // 
             // label3
             // 
@@ -156,32 +156,32 @@
             this.txtPhone.Location = new System.Drawing.Point(15, 217);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(181, 20);
-            this.txtPhone.TabIndex = 12;
+            this.txtPhone.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 177);
+            this.label2.Location = new System.Drawing.Point(69, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Celular";
+            this.label2.Text = "N° Teléfono";
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(15, 135);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(181, 20);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 95);
+            this.label1.Location = new System.Drawing.Point(69, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Email";
+            this.label1.Text = "Correo Electrónico";
             // 
             // labelName
             // 

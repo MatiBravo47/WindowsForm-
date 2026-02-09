@@ -25,6 +25,7 @@ namespace Views
         void Info(string msg);
         //Muestra errores
         void Error(string msg);
+        bool Confirm(string msg);
 
         //Datos(interacción con la UI)
         void EnterEditMode(bool isNew);

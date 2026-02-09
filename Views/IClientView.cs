@@ -21,6 +21,7 @@ namespace Views
         Guid SelectedId();
         void Info(string msg);
         void Error(string msg);
+        bool Confirm(string msg);
 
         // Datos (interacción con la UI)
         void EnterEditMode(bool isNew);

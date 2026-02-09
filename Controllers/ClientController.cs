@@ -1,4 +1,5 @@
 ﻿using Model;
+using System.Windows.Forms;
 using Views;
 
 namespace Controllers
@@ -76,6 +77,11 @@ namespace Controllers
             if (c == null)
             {
                 _view.Error("No se encontró el cliente.");
+                return;
+            }
+
+            if (!_view.Confirm("Estas seguro que desea eliminar el cliente"))
+            {
                 return;
             }
 
