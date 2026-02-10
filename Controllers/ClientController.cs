@@ -25,8 +25,8 @@ namespace Controllers
             _view.AddRequested += (s, e) => StartAdd();
             _view.EditRequested += (s, e) => StartEdit();
             _view.DeleteRequested += (s, e) => StartDelete();
-            _view.SaveRequested += (s, e) => StartSave();
-            _view.CancelRequested += (s, e) => StartCancel();
+            //_view.SaveRequested += (s, e) => StartSave();
+            //_view.CancelRequested += (s, e) => StartCancel();
             _view.SearchRequested += (s, e) => StartSearch();
 
             // Carga datos iniciales
@@ -37,11 +37,14 @@ namespace Controllers
         {
             Refresh();
         }
-
+        
+        /*
         private void StartCancel()
         {
             _view.ExitEditMode();
         }
+        */
+
 
         private void StartSave()
         {

@@ -43,6 +43,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.pnlEditor.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             this.dgvClients.Margin = new System.Windows.Forms.Padding(2);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowHeadersWidth = 51;
-            this.dgvClients.Size = new System.Drawing.Size(591, 358);
+            this.dgvClients.Size = new System.Drawing.Size(591, 383);
             this.dgvClients.TabIndex = 0;
             // 
             // txtSearch
@@ -68,7 +70,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(15, 315);
+            this.btnSave.Location = new System.Drawing.Point(15, 351);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 28);
@@ -112,7 +114,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(115, 315);
+            this.btnCancel.Location = new System.Drawing.Point(115, 351);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(81, 28);
@@ -123,6 +125,8 @@
             // pnlEditor
             // 
             this.pnlEditor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEditor.Controls.Add(this.textBox1);
+            this.pnlEditor.Controls.Add(this.label4);
             this.pnlEditor.Controls.Add(this.txtSurname);
             this.pnlEditor.Controls.Add(this.lblSurname);
             this.pnlEditor.Controls.Add(this.txtAddress);
@@ -138,7 +142,7 @@
             this.pnlEditor.Location = new System.Drawing.Point(729, 62);
             this.pnlEditor.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditor.Name = "pnlEditor";
-            this.pnlEditor.Size = new System.Drawing.Size(210, 358);
+            this.pnlEditor.Size = new System.Drawing.Size(210, 383);
             this.pnlEditor.TabIndex = 7;
             // 
             // txtSurname
@@ -252,6 +256,24 @@
             this.labelTitle.TabIndex = 10;
             this.labelTitle.Text = "Clientes";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 281);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Localidad";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 313);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(181, 20);
+            this.textBox1.TabIndex = 17;
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,5 +321,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

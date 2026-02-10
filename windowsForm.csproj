@@ -87,6 +87,12 @@
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Sale.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Views\ClientEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClientEditForm.Designer.cs">
+      <DependentUpon>ClientEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ClientEditForm.resx">
+      <DependentUpon>ClientEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>

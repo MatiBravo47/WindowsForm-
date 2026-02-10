@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Xml.Linq;
+using WindowsForm.Views;
 
 namespace Views
 {
@@ -15,11 +15,7 @@ namespace Views
         public event EventHandler AddRequested;
         public event EventHandler EditRequested;
         public event EventHandler DeleteRequested;
-        public event EventHandler SaveRequested;
-        public event EventHandler CancelRequested;
         public event EventHandler SearchRequested;
-
-        private Guid? _editingId;
 
         public ClientForm()
         {
@@ -41,14 +37,10 @@ namespace Views
             dgvClients.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Address", HeaderText = "Direccion" });
 
             // Conectar eventos
-            btnAdd.Click += (s, e) => AddRequested?.Invoke(this, EventArgs.Empty);
-            btnEdit.Click += (s, e) => EditRequested?.Invoke(this, EventArgs.Empty);
+            btnAdd.Click += BtnAdd_Click;
+            btnEdit.Click += BtnEdit_Click; 
             btnDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
-            btnSave.Click += (s, e) => SaveRequested?.Invoke(this, EventArgs.Empty);
-            btnCancel.Click += (s, e) => CancelRequested?.Invoke(this, EventArgs.Empty);
             txtSearch.TextChanged += (s, e) => SearchRequested?.Invoke(this, EventArgs.Empty);
-
-            ExitEditMode();
         }
 
         public void BindClients(IEnumerable<Client> clients)
@@ -57,56 +49,34 @@ namespace Views
             dgvClients.DataSource = new List<Client>(clients);
         }
 
-        //Lee los datos del formulario
-        public Client ReadEditor()
-        {
-            return new Client
-            {
-                id = _editingId ?? Guid.NewGuid(),
-                Name = txtName.Text.Trim(),
-                Surname = txtSurname.Text.Trim(),
-                Email = txtEmail.Text.Trim(),
-                Phone = txtPhone.Text.Trim(),
-                Address = txtAddress.Text.Trim()
-
-            };
-        }
-
-        // Carga datos en el formulario
-        public void LoadEditor(Client c)
-        {
-            _editingId = c?.id;
-            txtName.Text = c?.Name ?? "";
-            txtSurname.Text = c?.Surname ?? "";
-            txtEmail.Text = c?.Email ?? "";
-            txtPhone.Text = c?.Phone ?? "";
-            txtAddress.Text = c?.Address ?? "";
-        }
-
         public Guid SelectedId()
         {
             if (dgvClients.CurrentRow?.DataBoundItem is Client c)
                 return c.id;
+
             return Guid.Empty;
         }
 
+
         public string searchText() => txtSearch.Text.Trim();
 
-        public void EnterEditMode(bool isNew)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
-            pnlEditor.Enabled = true;
-            dgvClients.Enabled = false;
-            txtName.Focus();
-        }
+            using var form = new ClientEditForm();
 
-        public void ExitEditMode()
+            if (form.ShowDialog(this) == DialogResult.OK)
+                AddRequested?.Invoke(this, form.ResultClient);
+        }
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
-            pnlEditor.Enabled = false;
-            dgvClients.Enabled = true;
-            _editingId = null;
-            txtName.Text = "";
-        }
+            if (dgvClients.CurrentRow?.DataBoundItem is not Client client)
+                return;
 
+            using var form = new ClientEditForm(client);
+
+            if (form.ShowDialog(this) == DialogResult.OK)
+                EditRequested?.Invoke(this, form.ResultClient);
+        }
         public void Info(string msg) => MessageBox.Show(this, msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         public void Error(string msg) => MessageBox.Show(this, msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -123,6 +93,11 @@ namespace Views
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

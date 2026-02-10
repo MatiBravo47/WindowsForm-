@@ -13,8 +13,8 @@ namespace Views
         event EventHandler AddRequested;
         event EventHandler EditRequested;
         event EventHandler DeleteRequested;
-        event EventHandler SaveRequested;
-        event EventHandler CancelRequested;
+        //event EventHandler SaveRequested;
+        //event EventHandler CancelRequested;
         event EventHandler SearchRequested;
 
         // Feedback (respuesta al usuario)
@@ -24,11 +24,11 @@ namespace Views
         bool Confirm(string msg);
 
         // Datos (interacción con la UI)
-        void EnterEditMode(bool isNew);
-        void ExitEditMode();
+        //void EnterEditMode(bool isNew);
+        //void ExitEditMode();
         void BindClients(IEnumerable<Client> clients);
-        void LoadEditor(Client client);
-        Client ReadEditor();
+        //void LoadEditor(Client client);
+        //Client ReadEditor();
         string searchText();
     }
 }
