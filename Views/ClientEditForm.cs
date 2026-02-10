@@ -2,7 +2,7 @@
 using Model;
 using System.Windows.Forms;
 
-namespace WindowsForm.Views
+namespace Views
 {
     public partial class ClientEditForm : Form
     {
@@ -42,19 +42,14 @@ namespace WindowsForm.Views
                 Address = txtAddress.Text.Trim()
             };
 
-            DialogResult = DialogResult.OK;
-            Close();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
-        }
-
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

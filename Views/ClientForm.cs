@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using WindowsForm.Views;
+using Views;
 
 namespace Views
 {
@@ -68,7 +68,7 @@ namespace Views
             ClientEditForm form = new ClientEditForm();
             try
             {
-                if (form.ShowDialog(this) == DialogResult.OK && form.ResultClient != null)
+                if (form.ShowDialog(this) == DialogResult.OK)
                 {
                     AddRequested?.Invoke(this, new ClientEventArgs(form.ResultClient));
                 }

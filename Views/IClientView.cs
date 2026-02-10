@@ -7,7 +7,7 @@ namespace Views
     /// <summary>
     /// Interfaz para la vista de clientes
     /// </summary>
-    interface IClientView
+    public interface IClientView
     {
         // Eventos: avisa que el usuario lo pidió
         event EventHandler<ClientEventArgs> AddRequested;
@@ -16,7 +16,7 @@ namespace Views
         event EventHandler SearchRequested;
 
         // Feedback (respuesta al usuario)
-        System.Guid SelectedId();
+        Guid SelectedId();
         void Info(string msg);
         void Error(string msg);
         bool Confirm(string msg);

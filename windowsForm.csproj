@@ -93,7 +93,7 @@
     <Compile Include="Views\ClientEditForm.Designer.cs">
       <DependentUpon>ClientEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Clienteventargs.cs" />
+    <Compile Include="Views\ClientEventArgs.cs" />
     <Compile Include="Views\ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>

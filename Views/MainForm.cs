@@ -12,6 +12,7 @@ namespace Views
     {
         private readonly IProductRepository _productRepo;
         private readonly IClientRepository _clientRepo;
+        private ClientController _clientController;
 
         public MainForm(IProductRepository productRepo, IClientRepository clientRepo)
         {
@@ -46,10 +47,10 @@ namespace Views
             ClientForm clientForm = new ClientForm();
             IClientView clientView = clientForm;
 
-            var clientController = new ClientController(_clientRepo, clientView);
-            clientController.Init();
+            _clientController = new ClientController(_clientRepo, clientView);
+            _clientController.Init();
 
-            clientForm.ShowDialog();
+            clientForm.ShowDialog(this);
         }
     }
 }

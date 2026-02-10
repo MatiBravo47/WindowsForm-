@@ -1,4 +1,4 @@
-﻿namespace WindowsForm.Views
+﻿namespace Views
 {
     partial class ClientEditForm
     {
@@ -150,7 +150,7 @@
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -160,6 +160,7 @@
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ClientEditForm
             // 

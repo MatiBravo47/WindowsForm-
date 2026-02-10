@@ -31,40 +31,38 @@ namespace Controllers
             Refresh();
         }
 
-        private void OnAddRequested(object sender, object e)
+        private void OnAddRequested(object sender, ClientEventArgs e)
         {
-            if (e is Client newClient)
-            {
-                // Validación
-                var err = Validate(newClient);
-                if (err != "")
-                {
-                    _view.Error(err);
-                    return;
-                }
+            var newClient = e.Client;
 
-                _repo.Add(newClient);
-                Refresh();
-                _view.Info("Cliente agregado correctamente");
+            // Validación
+            var err = Validate(newClient);
+            if (err != "")
+            {
+                _view.Error(err);
+                return;
             }
+
+            _repo.Add(newClient);
+            Refresh();
+            _view.Info("Cliente agregado correctamente");
         }
 
-        private void OnEditRequested(object sender, object e)
+        private void OnEditRequested(object sender, ClientEventArgs e)
         {
-            if (e is Client editedClient)
-            {
-                // Validación
-                var err = Validate(editedClient);
-                if (err != "")
-                {
-                    _view.Error(err);
-                    return;
-                }
+            var editedClient = e.Client;
 
-                _repo.Update(editedClient);
-                Refresh();
-                _view.Info("Cliente actualizado correctamente");
+            // Validación
+            var err = Validate(editedClient);
+            if (err != "")
+            {
+                _view.Error(err);
+                return;
             }
+
+            _repo.Update(editedClient);
+            Refresh();
+            _view.Info("Cliente actualizado correctamente");
         }
         private void StartSearch()
         {
