@@ -40,8 +40,8 @@
             this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -140,33 +140,34 @@
             this.txtPhone.Size = new System.Drawing.Size(224, 20);
             this.txtPhone.TabIndex = 11;
             // 
-            // buttonSave
+            // btnSave
             // 
-            this.buttonSave.BackColor = System.Drawing.SystemColors.Highlight;
-            this.buttonSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSave.Location = new System.Drawing.Point(59, 404);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(91, 34);
-            this.buttonSave.TabIndex = 12;
-            this.buttonSave.Text = "Guardar";
-            this.buttonSave.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Location = new System.Drawing.Point(59, 404);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(91, 34);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // buttonCancel
+            // btnCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(199, 404);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(84, 34);
-            this.buttonCancel.TabIndex = 13;
-            this.buttonCancel.Text = "Cancelar";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(199, 404);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(84, 34);
+            this.btnCancel.TabIndex = 13;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // ClientEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(345, 450);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.txtLocalidad);
@@ -200,7 +201,7 @@
         private System.Windows.Forms.TextBox txtLocalidad;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

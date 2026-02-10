@@ -12,8 +12,8 @@ namespace Views
     public partial class ClientForm : Form, IClientView
     {
         // Eventos
-        public event EventHandler AddRequested;
-        public event EventHandler EditRequested;
+        public event EventHandler<ClientEventArgs> AddRequested;
+        public event EventHandler<ClientEventArgs> EditRequested;
         public event EventHandler DeleteRequested;
         public event EventHandler SearchRequested;
 
@@ -38,9 +38,12 @@ namespace Views
 
             // Conectar eventos
             btnAdd.Click += BtnAdd_Click;
-            btnEdit.Click += BtnEdit_Click; 
+            btnEdit.Click += BtnEdit_Click;
             btnDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
             txtSearch.TextChanged += (s, e) => SearchRequested?.Invoke(this, EventArgs.Empty);
+
+            // Ocultar el panel editor (ya no se usa)
+            pnlEditor.Visible = false;
         }
 
         public void BindClients(IEnumerable<Client> clients)
@@ -49,12 +52,12 @@ namespace Views
             dgvClients.DataSource = new List<Client>(clients);
         }
 
-        public Guid SelectedId()
+        public System.Guid SelectedId()
         {
             if (dgvClients.CurrentRow?.DataBoundItem is Client c)
                 return c.id;
 
-            return Guid.Empty;
+            return System.Guid.Empty;
         }
 
 
@@ -62,20 +65,40 @@ namespace Views
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            using var form = new ClientEditForm();
-
-            if (form.ShowDialog(this) == DialogResult.OK)
-                AddRequested?.Invoke(this, form.ResultClient);
+            ClientEditForm form = new ClientEditForm();
+            try
+            {
+                if (form.ShowDialog(this) == DialogResult.OK && form.ResultClient != null)
+                {
+                    AddRequested?.Invoke(this, new ClientEventArgs(form.ResultClient));
+                }
+            }
+            finally
+            {
+                form.Dispose();
+            }
         }
+
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvClients.CurrentRow?.DataBoundItem is not Client client)
+            if (!(dgvClients.CurrentRow?.DataBoundItem is Client client))
+            {
+                Info("Selecciona un cliente primero.");
                 return;
+            }
 
-            using var form = new ClientEditForm(client);
-
-            if (form.ShowDialog(this) == DialogResult.OK)
-                EditRequested?.Invoke(this, form.ResultClient);
+            ClientEditForm form = new ClientEditForm(client);
+            try
+            {
+                if (form.ShowDialog(this) == DialogResult.OK && form.ResultClient != null)
+                {
+                    EditRequested?.Invoke(this, new ClientEventArgs(form.ResultClient));
+                }
+            }
+            finally
+            {
+                form.Dispose();
+            }
         }
         public void Info(string msg) => MessageBox.Show(this, msg, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         public void Error(string msg) => MessageBox.Show(this, msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

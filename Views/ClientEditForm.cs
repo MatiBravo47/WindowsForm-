@@ -6,7 +6,7 @@ namespace WindowsForm.Views
 {
     public partial class ClientEditForm : Form
     {
-        private Guid? _editingId;
+        private System.Guid? _editingId;
 
         public Client ResultClient { get; private set; }
 
@@ -50,6 +50,11 @@ namespace WindowsForm.Views
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
